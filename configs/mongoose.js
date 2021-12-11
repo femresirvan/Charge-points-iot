@@ -5,7 +5,12 @@ const chalk = require('chalk');
 // mongoose.set('useCreateIndex', true);
 // mongoose.set('useNewUrlParser', true);
 // mongoose.set('useUnifiedTopology', true);
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect('mongodb+srv://femresirvan:147852369Fee@cluster0.4ubsi.mongodb.net/chargepoints?retryWrites=true&w=majority',{
+    // 'useFindAndModify': false,
+    // 'useCreateIndex': true,
+    'useNewUrlParser': true,
+    'useUnifiedTopology': true
+})
     .then(() => {
         console.log(chalk.green('✓'), chalk.blueBright('MongoDB connection is successful.'));
     });

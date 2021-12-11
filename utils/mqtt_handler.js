@@ -1,5 +1,5 @@
 const mqtt = require('mqtt');
-
+const Point = require('../models/point');
 class MqttHandler {
   constructor() {
     this.mqttClient = null;
@@ -28,8 +28,18 @@ class MqttHandler {
     this.mqttClient.subscribe(this.topic, {qos: 0});
 
     // When a message arrives, console.log it
-    this.mqttClient.on('message', function (topic, message) {
-      console.log(message.toString());
+    this.mqttClient.on('message', async (topic, message) => {
+      message = JSON.parse(message.toString());
+      console.log(message);
+      try{
+        const filter = { '_id': message._id , 'slots.slotName': message.slotName};
+        const update = {'$set': {'slots.$.isFull': message.isFull}};
+        let doc = await Point.updateOne(filter, update);
+        console.log(doc);
+      }catch(err){
+        console.error(err);
+      }
+      
     });
 
     this.mqttClient.on('close', () => {

@@ -7,14 +7,15 @@ const pointSchema = new mongoose.Schema({
     locationy: {
         type: Number
     },
-    type: String,
+    type: Number,
+    name: String,
     slots: [{
         slotName: {
             type: String
         },
         isFull: {
             type: Boolean,
-            default: false
+            // default: false
         }
     }]
 });

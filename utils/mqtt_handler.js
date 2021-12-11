@@ -4,7 +4,7 @@ const chalk = require('chalk');
 class MqttHandler {
   constructor() {
     this.mqttClient = null;
-    this.host = 'mqtt://test.mosquitto.org';
+    this.host = 'mqtt://broker.hivemq.com';
     // this.username = 'YOUR_USER'; // mqtt credentials if these are needed to connect
     // this.password = 'YOUR_PASSWORD';
     this.topic = 'deneme';
@@ -37,11 +37,14 @@ class MqttHandler {
         const update = {'$set': {'slots.$.isFull': message.isFull}};
         let doc = await Point.updateOne(filter, update);
         console.log(doc);
+        let result = await Point.findOne({'id': message._id});
+        const io = require('../configs/socketio').getIO();
+        io.emit('istasyon',result);
       }catch(err){
         console.error(err);
       }
-      const io = require('../configs/socketio').getIO();
-      io.emit('istasyon',message);
+      
+      
     });
 
     this.mqttClient.on('close', () => {

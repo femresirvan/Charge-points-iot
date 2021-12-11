@@ -8,23 +8,6 @@ async function initMap() {
         zoom: 12,
         center: istanbul,
     });
-    let marker1 = new google.maps.Marker({
-        position: {
-            lat: 41.515137,
-            lng: 28.979530
-        },
-        map: map
-    });
-
-
-
-    let InfoWindow1 = new google.maps.InfoWindow({
-        content: `Sensorid: b\nVoltage: 0\nFlame: 0`
-    });
-
-    marker1.addListener('click', function () {
-        InfoWindow1.open(map, marker1);
-    });
 
     let data;
 
@@ -33,24 +16,68 @@ async function initMap() {
         data = docs.data.data;
 
     }).catch(err => console.log(err))
-    console.log(data);
+    // console.log(data);
     let markers = new Array();
-    // data[0].locationx = Number(data[0].locationx)
-
+    let infoWindows = new Array();
     for (var i = 0; i < data.length; i++) {
-        // console.log(data);
         markers[i] = new google.maps.Marker({
             position: {
                 lat: data[i].locationx,
                 lng: data[i].locationy
             },
-            map: map
+            map: map,
+            title: "SA"
+        });
+
+        markers[i].index = i; //add index property
+        markers[i]._id = data[i]._id;
+        let content;
+        content = "<div>\n"
+        content += `Name: ${data[i].name}</br>`;
+        content += `Charge Type: ${data[i].type}</br>`;
+        for (var j = 0; j < data[i].slots.length; j++) {
+
+            content += `SlotName: ${data[i].slots[j].slotName}`;
+            if (data[i].slots[j].isFull) content += `<span style="color:red;"> State: Full</span></br>`;
+            else content += `<span style="color:green;"> State: Free</span></br>`;
+        }
+        content += "</div"
+        infoWindows[i] = new google.maps.InfoWindow({
+            content: content,
+            maxWidth: 300
+        });
+
+        google.maps.event.addListener(markers[i], 'click', function () {
+            infoWindows[this.index].open(map, markers[this.index]);
+            map.panTo(markers[this.index].getPosition());
         });
     }
 
-    
     socket.on('istasyon', (message) => {
         console.log(message);
+        for (var i = 0; i < markers.length; i++) {
+            markers[i]._id = message._id;
 
+            content = "<div>\n"
+            content += `${message.name}</br>`;
+            content += `Charge Type: ${message.type}</br>`;
+            for (var j = 0; j < message.slots.length; j++) {
+
+                content += `SlotName: ${message.slots[j].slotName}`;
+                if (message.slots[j].isFull) content += `<span style="color:red;"> State: Full</span></br>`;
+                else content += `<span style="color:green;"> State: Free</span></br>`;
+            }
+            content += "</div"
+            infoWindows[i].setContent(content);
+
+
+            // google.maps.event.addListener(markers[i], 'click', function() {
+
+            //         infoWindows[this.index].close();
+
+            //     infoWindows[this.index].open(map,markers[this.index]);
+            //     map.panTo(markers[this.index].getPosition());
+            // });  
+        }
     })
 }

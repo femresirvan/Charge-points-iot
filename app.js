@@ -67,3 +67,5 @@ server.listen(app.get('port'), () => {
     console.log('%s App is running at http://localhost:3000', chalk.green('✓'));
     console.log(chalk.magentaBright('  Press CTRL-C to stop'));
 });
+
+require('./services/park_sensors');

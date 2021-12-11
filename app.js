@@ -62,6 +62,12 @@ app.use((err, req, res, next) => {
 
 
 var server = http.createServer(app)
+const io = require('./configs/socketio').init(server);
+
+io.on('connection', (socket) => {
+    console.log('%s A user connected.', chalk.red('✓'));
+  });
+
 
 server.listen(app.get('port'), () => {
     console.log('%s App is running at http://localhost:3000', chalk.green('✓'));
@@ -69,3 +75,5 @@ server.listen(app.get('port'), () => {
 });
 
 require('./services/park_sensors');
+
+

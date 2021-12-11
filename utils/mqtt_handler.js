@@ -1,5 +1,6 @@
 const mqtt = require('mqtt');
 const Point = require('../models/point');
+const chalk = require('chalk');
 class MqttHandler {
   constructor() {
     this.mqttClient = null;
@@ -21,7 +22,7 @@ class MqttHandler {
 
     // Connection callback
     this.mqttClient.on('connect', () => {
-      console.log(`mqtt client connected`);
+      console.log('%s MQTT client connected.', chalk.yellow('✓'));
     });
 
     // mqtt subscriptions
@@ -39,7 +40,8 @@ class MqttHandler {
       }catch(err){
         console.error(err);
       }
-      
+      const io = require('../configs/socketio').getIO();
+      io.emit('istasyon',message);
     });
 
     this.mqttClient.on('close', () => {

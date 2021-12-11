@@ -21,7 +21,7 @@ var paths = {
   },
   scripts: {
     src: 'public/js/**/*.js',
-    dest: 'public/dist'
+    dest: 'public/dist/js'
   },
   images: {
     src: 'public/images/**/*.{jpg,jpeg,png}',

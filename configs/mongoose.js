@@ -5,7 +5,7 @@ const chalk = require('chalk');
 // mongoose.set('useCreateIndex', true);
 // mongoose.set('useNewUrlParser', true);
 // mongoose.set('useUnifiedTopology', true);
-mongoose.connect('mongodb+srv://femresirvan:147852369Fee@cluster0.4ubsi.mongodb.net/chargepoints?retryWrites=true&w=majority',{
+mongoose.connect(process.env.MONGODB_URI,{
     // 'useFindAndModify': false,
     // 'useCreateIndex': true,
     'useNewUrlParser': true,

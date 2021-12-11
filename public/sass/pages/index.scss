@@ -1,0 +1,31 @@
+#map {
+    height: 78vh;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+    margin-top: 20px;
+    }
+
+  @media (max-width: 576px) {
+ 
+    #map{
+        height: 70vh;
+    }
+    #filter{
+      height: 30vh;
+    }
+  }
+
+#filter{
+  
+  height: 78vh;
+  margin-top: 20px;
+
+  border: 1px solid rgb(162, 211, 47);
+  border-radius: 2px;
+}
+
+.button{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.11), 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+  width: 49%;
+}

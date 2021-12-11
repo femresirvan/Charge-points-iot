@@ -1,0 +1,44 @@
+{
+  "name": "charge-points-iot",
+  "version": "1.0.0",
+  "description": "ELEKTRİKLİ ARAÇ ŞARJ İSTASYONU UYGULAMASI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/femresirvan/Charge-points-iot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/femresirvan/Charge-points-iot/issues"
+  },
+  "homepage": "https://github.com/femresirvan/Charge-points-iot#readme",
+  "dependencies": {
+    "bootstrap": "^4",
+    "chalk": "^4",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "http": "^0.0.1-security",
+    "mongoose": "^6.1.1",
+    "morgan": "^1.10.0",
+    "mqtt": "^4.2.8",
+    "path": "^0.12.7",
+    "socket.io": "^4.4.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-uglify": "^3.0.2",
+    "del": "^6.0.0",
+    "node-sass": "^6.0.1"
+  }
+}

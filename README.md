@@ -28,6 +28,9 @@ Responsive tasarımı
 
 ![Alt Text](https://thumbs.gfycat.com/GeneralYearlyAtlanticsharpnosepuffer-size_restricted.gif)
 
+## NPM Paketleri
+![Alt Text](https://i.ibb.co/wQjFs7c/dependencies.jpg)
+
 ## Kurulumu
 
 MongoDB veritabanınızın olması gerekmektedir.

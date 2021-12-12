@@ -38,7 +38,7 @@ module.exports.getData = async (req, res) => {
             }
         }
         else result = doc;
-        console.log(result.length);
+        // console.log(result.length);
         res.json({
             success: true,
             status: 200,
@@ -52,20 +52,20 @@ module.exports.getData = async (req, res) => {
         next(error);
     }
 }
-module.exports.insertData = async (req, res) => {
-    try{
-        const station = new Point();
-        const result = await station.save(req.body);
-        res.json({
-            success: true,
-            msg:"New station has inserted succesfully."
-        });
-    }catch(err){
-        const error = {
-            msg:err,
-            status:500 // validation errorlara vakit yetmedi :/ joi kullanılabilir.
-        }
-    }
+// module.exports.insertData = async (req, res) => {
+//     try{
+//         const station = new Point();
+//         const result = await station.save(req.body);
+//         res.json({
+//             success: true,
+//             msg:"New station has inserted succesfully."
+//         });
+//     }catch(err){
+//         const error = {
+//             msg:err,
+//             status:500 // validation errorlara vakit yetmedi :/ joi kullanılabilir.
+//         }
+//     }
     
     
-}
+// }

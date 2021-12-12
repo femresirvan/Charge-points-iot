@@ -1,2 +1,2 @@
-# Charge-points-iot
+# Charge Points IoT
 ELEKTRİKLİ ARAÇ ŞARJ İSTASYONU UYGULAMASI

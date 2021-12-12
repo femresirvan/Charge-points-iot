@@ -8,5 +8,5 @@ const api = require('../controllers/api');
 router.get('/',indexPage);
 router.get('/contact',contactPage);
 router.get('/api/points', api.getData);
-router.post('/api/points', api.insertData);
+// router.post('/api/points', api.insertData);
 module.exports = router;

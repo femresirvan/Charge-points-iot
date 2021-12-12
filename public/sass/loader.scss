@@ -72,3 +72,19 @@ background:#Fff;
     height: 0%;
   }
 }
+
+@media (max-width: 576px) {
+ 
+  #logo{
+    width:65%;
+  }
+}
+
+@media (min-width: 576px) {
+ 
+  #logo{
+    width: 20%;
+  }
+}
+
+ 

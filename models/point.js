@@ -9,6 +9,7 @@ const pointSchema = new mongoose.Schema({
     },
     type: Number,
     name: String,
+    city: String,
     slots: [{
         slotName: {
             type: String

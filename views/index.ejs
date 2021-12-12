@@ -58,62 +58,75 @@
                             <div class="card mb-2 border-0">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">City:</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="İstanbul">
-                                  </div>
+                                    <input type="email" class="form-control" id="city-input"
+                                         placeholder="İstanbul">
+                                </div>
                             </div>
                             <div class="card mb-2 border-0">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Station:</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Açık Hava Tiyatrosu">
-                                  </div>
+                                    <input type="email" class="form-control" id="station-input"
+                                             placeholder="Açık Hava Tiyatrosu">
+                                </div>
                             </div>
-                         <div class="card border-0 mb-2">
-                            <div>Slot Rates:</div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                <label class="form-check-label" for="exampleRadios1">
-                                  Free Slots
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                <label class="form-check-label" for="exampleRadios2">
-                                  Full Slots
-                                </label>
-                              </div>
-                         </div>
-                         <div class="card border-0 mb-2">
-                            <div>Charge Types:</div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                <label class="form-check-label" for="exampleRadios1">
-                                  Type-1
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                <label class="form-check-label" for="exampleRadios2">
-                                  Type-2
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option3">
-                                <label class="form-check-label" for="exampleRadios2">
-                                  Type-3
-                                </label>
-                              </div>
-                         </div>
-                              
-                          </div>
+                            <div class="card border-0 mb-2">
+                                <form>
+                                    <div>Slot Rates:</div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios"
+                                            id="free-radio" value="free">
+                                        <label class="form-check-label" for="exampleRadios1">
+                                            Free Slots
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios"
+                                            id="full-radio" value="full">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                            Full Slots
+                                        </label>
+                                    </div>
+                                </form>
+                                
+                            </div>
+                            <form>
+                                <div class="card border-0 mb-2">
+                                    <div>Charge Types:</div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios"
+                                            id="type1-radio" value="1">
+                                        <label class="form-check-label" for="exampleRadios1">
+                                            Type-1
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios"
+                                            id="type2-radio" value="2">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                            Type-2
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios"
+                                            id="type3-radio" value="3">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                            Type-3
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                       
+
+                        </div>
                         <div class="col-12 col-md-9 mx-auto">
-                            <span><button class="btn btn-primary button">
-                                Apply Filter
-                            </button></span>
-                            <span><button class="btn btn-danger button">
-                                Clear Filter
-                            </button></span>
-                            
-                            
+                            <span><button class="btn btn-primary button" id="apply-filter">
+                                    Apply Filter
+                                </button></span>
+                            <span><button class="btn btn-danger button" id="clear-filter">
+                                    Clear Filter
+                                </button></span>
+
+
                         </div>
                     </div>
                 </div>
@@ -126,15 +139,17 @@
 
 
     <footer class="mt-4">
-        <p class="text text-center text-dark">© Made by Fırat Emre ŞİRVAN</p>
+        <p class="text text-center text-dark">© Made by Fırat Emre ŞİRVAN in 2 days...</p>
     </footer>
 
 
     <%- include('./layouts/loaderf') %>
 
+
     <!-- gulp had an error i'm going to fix it later -->
     <script src="../public/js/socket.js"></script>
     <script src="../public/js/map.js"></script>
+    <script src="../public/js/filter.js"></script>
 
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8-_riez5UR0J7q3vDaEhavRMiR15R9rk&callback=initMap&libraries=&v=weekly"

@@ -31,17 +31,23 @@ Responsive tasarımı
 ## NPM Paketleri
 ![Alt Text](https://i.ibb.co/wQjFs7c/dependencies.jpg)
 
+Not: MQTT ile gönderim yapılan program MQTT Box'tır.
+
 ## Kurulumu
 
-MongoDB veritabanınızın olması gerekmektedir.
+1. Projenin çekilmesi
 
-<ul>
-    <li>Proje kurulumu: Github reposunu clone ederek kurabilirsiniz.</li>
-    <li>Paket Kurulumu: npm i</li>
-   <li>MongoDB bağlantısı: .env dosyasında MONGODB_URI ile mongodb connection stringiniz olması gerekir</li>
-    <li>Çalıştırma: npm run komutu ile program çalışır</li>
-  
-  
-</ul>
+        $ git clone https://github.com/femresirvan/Charge-points-iot.git
+        $ cd Charge-points-iot
 
-Not: MQTT ile gönderim yapılan program MQTT Box'tır.
+2. Paket Kurulumu:
+
+        $ npm i
+
+3. MongoDB bağlantısı: .env dosyasında MONGODB_URI ile mongodb connection stringiniz olması gerekir.
+
+        MONGODB_URI="YOUR_MONGODB_CONNECTION_STRING"
+
+4. Çalıştırma:
+
+        $ npm run

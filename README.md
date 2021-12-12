@@ -50,4 +50,4 @@ Not: MQTT ile gönderim yapılan program MQTT Box'tır.
 
 4. Çalıştırma:
 
-        $ npm run
+        $ node app

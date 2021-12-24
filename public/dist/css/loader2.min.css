@@ -1,0 +1,1 @@
+.rotate-center{width:100px;height:100px;animation-name:example;animation-duration:1s;animation-iteration-count:3}@keyframes example{0%{left:0;top:0}100%{left:50px;top:0}}.loader-wrapper{width:100%;height:100%;position:absolute;top:0;left:0;background:#fff;display:flex;justify-content:center;align-items:center}

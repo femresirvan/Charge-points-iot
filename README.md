@@ -48,6 +48,10 @@ Not: MQTT ile gönderim yapılan program MQTT Box'tır.
 
         MONGODB_URI="YOUR_MONGODB_CONNECTION_STRING"
 
-4. Çalıştırma:
+4. Google Maps API Key entegre etme. (./index.ejs dosyasına)
+
+        <script src="YOUR GOOGLE MAPS API KEY" async></script>
+
+5. Çalıştırma:
 
         $ node app

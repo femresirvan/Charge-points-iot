@@ -15,17 +15,18 @@ Elektrikli araçlarınızı şarj etmek için en kolay şekilde şarj istasyonu 
 ## Uygulama İçi Görüntüler
 
 IoT sensörlerinden gelen verilerin arayüzde gösterimi.
-![Alt Text](https://user-images.githubusercontent.com/60824063/147774513-c9587d8f-cacc-4d42-a707-577c8056149e.mp4)
+
+![Alt Text](https://thumbs.gfycat.com/MagnificentComfortableHomalocephale-size_restricted.gif)
 
 ![Alt Text](https://serving.photos.photobox.com/64335825e0c6cb61b7337767630d2921cc7e0e7126e10cafddf8f1748c320328edc83555.jpg)
 
 Filtreleme
 
-![Alt Text](https://user-images.githubusercontent.com/60824063/147774857-bd655a3a-d2fc-4f65-9f4c-0502d2c14c24.mp4)
+![Alt Text](https://thumbs.gfycat.com/FearfulGeneralGrayreefshark-size_restricted.gif)
 
 Responsive tasarımı
 
-![Alt Text](https://user-images.githubusercontent.com/60824063/147774791-1fc50a3f-2068-4da5-9f8e-a0e86741ea1e.mp4)
+![Alt Text](https://thumbs.gfycat.com/GeneralYearlyAtlanticsharpnosepuffer-size_restricted.gif)
 
 ## NPM Paketleri
 ![Alt Text](https://i.ibb.co/wQjFs7c/dependencies.jpg)
@@ -47,10 +48,6 @@ Not: MQTT ile gönderim yapılan program MQTT Box'tır.
 
         MONGODB_URI="YOUR_MONGODB_CONNECTION_STRING"
 
-4. Google Maps API Key entegre etme. (./index.ejs dosyasına)
-
-        <script src="YOUR GOOGLE MAPS API KEY" async></script>
-
-5. Çalıştırma:
+4. Çalıştırma:
 
         $ node app
